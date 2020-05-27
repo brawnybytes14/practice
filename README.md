@@ -1,3 +1,1 @@
-### Restaurants
-Practice DS/ALGO
-# 
+# Practice DS/ALGO
