@@ -46,6 +46,6 @@ class Graph {
             System.out.println(g.getDependencyCount());
 
         }
-
+        s.close();
     }
 }

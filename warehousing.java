@@ -2,7 +2,7 @@
 //import for Scanner and other utility classes
 import java.util.*;
 
-class TestClass {
+class WareHouse {
     public static void main(String args[]) throws Exception {
 
         // Scanner
@@ -72,7 +72,7 @@ class TestClass {
             }
         });
 
-        Map<String, Integer> mapSortedByValues = new LinkedHashMap<String, Integer>();
+        //Map<String, Integer> mapSortedByValues = new LinkedHashMap<String, Integer>();
 
         String[] result = new String[n];
         int k = 0;
@@ -83,6 +83,7 @@ class TestClass {
         }
 
         System.out.println(String.join(" = ", result));
+        s.close();
     }
 
     static int gcd(int a, int b) {

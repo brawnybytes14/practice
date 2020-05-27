@@ -48,6 +48,7 @@ class TestClass {
                 String output = String.valueOf(arrOne);
                 System.out.print(output+"\n"); 
         }
+        s.close();
     }
 }
 
