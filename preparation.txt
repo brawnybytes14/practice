@@ -1,0 +1,12 @@
+There are four ways we can transfer the data between components:
+1. Parent to Child: Sharing Data via Input
+2. Child to Parent: Sharing Data via ViewChild
+3. Child to Parent: Sharing Data via Output() and EventEmitter
+4. Unrelated Components: Sharing Data with a Service
+
+validation
+observable vs promise
+redux
+authentication vs authotization
+algorithms and data structures
+

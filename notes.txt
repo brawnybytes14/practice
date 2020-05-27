@@ -1,0 +1,84 @@
+---------------------------------------Softwares Installation Commands -----------------------------------------------------------------
+sudo apt install mariadb-server
+sudo apt install git
+
+
+--------------------------------------------Team Viewer----------------------
+Prod Server: 1562247104
+Test Server: 1584650899
+Backup Server: 1745215613
+
+
+------------------------------------DUMP CSV FILE in MySQL------------------------
+LOAD DATA LOCAL INFILE '/home/sw-team-server/AMS_Vijna/server_23_03_2020/db_scripts/final.csv' 
+INTO TABLE covidpassengers 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
+--------------------------------------DUMP COMMAND------------------------
+sudo mysqldump -u spotter_kit_user -p <database_name> > file.sql
+
+
+--------------------------- Convert node app to exe ----------------------------
+"pkg": "pkg --target=latest-linux-x64 --config package.json -o ./app app.js",
+"exe": "./app"
+
+
+----------------------------------------------------------------Detect unsaved changes-------------------------------
+hasUnsavedData(){
+  return this.loginForm.dirty;
+}
+
+@HostListener('window:beforeunload', ['$event'])
+handleBeforeUnload($event: any) {
+    if (this.hasUnsavedData()) {
+        $event.returnValue = true;
+    }
+}
+
+------------------------------------------------ML + Data Science Advise---------------------------------------
+Courses
+3 blue one
+stanford andew ng
+vl acedemy
+
+----------------------------------------------------- IP + PORT REGEX ------------------------------------------
+
+var ipPortRegexUsersFolder = new RegExp("http:\/\/(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]):[0-9]+\/" + config.usersFolder + "/");
+
+var imagePath = `http://172.18.35.19:8084/1590488693600_3e395793-8048-4806-84c4-7f5a4a620d06.jpeg`;
+
+var ipPortRegex = /http:\/\/(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]):[0-9]+\//i
+
+imagePath = imagePath.replace(ipPortRegex, '');
+
+console.log(imagePath)
+
+----------------------------------Generate Self Signed Certificate for node app-----------------------------------------------
+
+openssl req -nodes -new -x509 -keyout server.key -out server.cert
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
