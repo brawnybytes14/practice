@@ -10,3 +10,8 @@ redux
 authentication vs authotization
 algorithms and data structures
 
+
+Halloween Problem in database
+It refers to a problem where update operations could inadvertently end up modifying a row more than once.
+
+The problem was that he was progressing along an index, but when a row was modified, it was relocated to a position in front of where he was processing, so it got processed again.
