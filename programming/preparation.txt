@@ -4,6 +4,7 @@ There are four ways we can transfer the data between components:
 3. Child to Parent: Sharing Data via Output() and EventEmitter
 4. Unrelated Components: Sharing Data with a Service
 
+
 validation
 observable vs promise
 redux

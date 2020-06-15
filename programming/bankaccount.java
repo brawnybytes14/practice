@@ -55,6 +55,8 @@ class MyBankAccount implements MyTransactor {
     }
 
     public void abort(Object key) throws KeyException {
+        if (key != currentKey)
+            throw new KeyException("Aborted. Please try again. " + currentKey + " " + key);
         currentKey = null; // throws out pending trans state change, resets for next
     }
 }
@@ -118,7 +120,7 @@ class Driver {
                     System.out.println("thread 1 is running...");
 
                     u.transfer(1, rohit, john, "Transaction 01");
-                    u.transfer(50, rohit, john, "Transaction 02");
+                    //u.transfer(5000, rohit, john, "Transaction 02");
                     u.transfer(1, john, rohit, "Transaction 08");
                     u.transfer(1, john, rohit, "Transaction 10");
                     u.transfer(1, john, rohit, "Transaction 11");
@@ -130,7 +132,7 @@ class Driver {
                     u.transfer(1, john, rohit, "Transaction 09");
 
                 } catch (KeyException | BadAmount e) {
-                    System.out.println(e.getMessage());
+                    System.out.println("exception in thread1 " + e.getMessage());
                 }
 
             }
@@ -144,7 +146,7 @@ class Driver {
                     System.out.println("thread 2 is running...");
 
                     u.transfer(1, john, rohit,  "Transaction 06");
-                    u.transfer(1, john, rohit,  "Transaction 07");
+                    u.transfer(7, john, rohit,  "Transaction 07");
                     u.transfer(1, john, rohit,  "Transaction 14");
                     u.transfer(1, john, rohit,  "Transaction 15");
                     u.transfer(1, john, rohit,  "Transaction 16");
@@ -157,7 +159,7 @@ class Driver {
                     u.transfer(20, john, rohit,  "Transaction 23");
 
                 } catch (KeyException | BadAmount e) {
-                    System.out.println(e.getMessage());
+                    System.out.println("exception in thread2 " + e.getMessage());
 
                 }
 
